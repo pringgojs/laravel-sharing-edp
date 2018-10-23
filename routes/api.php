@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('delete/{id}', 'BlogController@destroy'); // xxx.com/api/blog
+Route::post('update', 'BlogController@update'); // xxx.com/api/blog
+Route::post('blog', 'BlogController@store'); // xxx.com/api/blog
+Route::get('blog/{id}', 'BlogController@show'); // xxx.com/api/blog
+Route::get('blog', 'BlogController@index'); // xxx.com/api/blog
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
